@@ -9,10 +9,13 @@
     // Initialize Speed Insights
     window.vitals = window.vitals || function () { (window.vitalsq = window.vitalsq || []).push(arguments); };
     
-    // Track Web Vitals
+    // Track Web Vitals with the correct configuration
     vitals('web-vitals', {
         path: window.location.pathname,
-        analyticsId: process.env.NEXT_PUBLIC_VERCEL_ANALYTICS_ID,
-        debug: false
+        analyticsId: window.location.hostname,
+        debug: true // Temporarily enable debug mode
     });
+
+    // Log initialization
+    console.log('Speed Insights initialized for:', window.location.hostname);
 })(); 
