@@ -1104,3 +1104,134 @@ footer .copyright-text {
           height: 150px;
      }
 }
+
+/* Soft Skills Section */
+#soft-skills {
+    background: var(--background-light);
+    padding: 100px 0;
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.soft-skill-item {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.soft-skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.soft-skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--contrast-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.soft-skill-item:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: var(--background-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.soft-skill-item:hover .skill-icon {
+    background: var(--primary-color);
+    transform: rotateY(360deg);
+}
+
+.skill-icon i {
+    font-size: 35px;
+    color: var(--primary-color);
+    transition: all 0.4s ease;
+}
+
+.soft-skill-item:hover .skill-icon i {
+    color: var(--white);
+}
+
+.soft-skill-item h3 {
+    color: var(--text-dark);
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.soft-skill-item p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.skill-progress {
+    width: 100%;
+    height: 6px;
+    background: var(--background-light);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--contrast-color));
+    border-radius: 3px;
+    transition: width 1.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+    }
+    
+    .soft-skill-item {
+        padding: 25px;
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill-icon i {
+        font-size: 25px;
+    }
+    
+    .soft-skill-item h3 {
+        font-size: 20px;
+    }
+    
+    .soft-skill-item p {
+        font-size: 14px;
+    }
+}
