@@ -1,43 +1,63 @@
-# Portfolio
-My Personal Portfolio here!
+# Luca Bracaloni - Portfolio
 
-# Portfolio di [Tuo Nome]
+Welcome to my professional portfolio website! This repository showcases my work as a Full-Stack Developer, highlighting my expertise in mobile and web development.
 
-Benvenuto nel mio portfolio! Qui puoi trovare una selezione dei miei progetti e delle competenze che ho sviluppato nel corso della mia carriera.
+## About Me
 
-## Chi Sono
+I am a Full-Stack Developer with a strong focus on mobile and web development. Currently working at Rjc Soft, I specialize in creating efficient and scalable applications using modern technologies. My approach to development is encapsulated in the motto: "Move fast and break things. Unless you are breaking stuff, you are not moving fast enough."
 
-Mi chiamo [Tuo Nome] e sono un [Tuo Ruolo Professionale] con esperienza in [Settori di Competenza]. La mia passione per [Descrivi la tua passione o area di interesse] mi ha portato a lavorare su diversi progetti, che puoi esplorare di seguito.
+## Technical Expertise
 
-## Competenze
+### Mobile Development
+- Native Android Development (Java)
+- Cross-Platform Development with React Native
+- Mobile UI/UX Design
+- Mobile App Architecture (MVC & MVVM)
 
-- **Linguaggi di Programmazione**: [Elenca i linguaggi che conosci]
-- **Tecnologie**: [Elenca le tecnologie con cui hai esperienza]
-- **Strumenti**: [Elenca gli strumenti che utilizzi]
+### Frontend Development
+- Angular 14+
+- JavaScript & TypeScript
+- HTML5 & CSS3
+- Modern UI Frameworks (Angular Material, PrimeNG, Tailwind CSS)
 
-## Tecnologie Utilizzate
+### Backend Development
+- Spring Boot
+- RESTful APIs
+- Microservices Architecture
+- Database Management
+- Security Implementation
 
-Il sito è stato sviluppato utilizzando le seguenti tecnologie:
+## Technologies Used in This Portfolio
 
-- **HTML**: Per la struttura del contenuto.
-- **CSS**: Per la stilizzazione e il layout.
-- **JavaScript**: Per le interazioni dinamiche.
-- **Bootstrap**: Per garantire la reattività e l'adattabilità del design su dispositivi diversi.
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Frameworks**: Bootstrap
+- **Libraries**: jQuery, Owl Carousel, Magnific Popup
+- **Icons**: Font Awesome
+- **Version Control**: Git
 
-## Progetti
+## Portfolio Features
 
-### [Nome del Progetto 1]
+- Responsive design for all devices
+- Modern and clean user interface
+- Interactive skill showcase
+- Professional project presentations
+- Contact information and social links
+- Video background integration
+- Smooth scrolling navigation
 
-Breve descrizione del progetto, le tecnologie utilizzate e il tuo ruolo. [Link al progetto o al repository]
+## Contact
 
-### [Nome del Progetto 2]
+- **Location**: Pisa, Italy (CAP 56123)
+- **Email**: luca.bracaloni87@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/luca-bracaloni-ba7346250/
 
-Breve descrizione del progetto, le tecnologie utilizzate e il tuo ruolo. [Link al progetto o al repository]
+## License
 
-## Contatti
+This portfolio is open source and available under the MIT License. Feel free to use it as a template for your own portfolio, but please provide appropriate attribution.
 
-Puoi contattarmi via e-mail all'indirizzo [Tuo Indirizzo Email] o seguirmi su [LinkedIn/Twitter/Altri Social].
+## Acknowledgments
 
-## Licenza
-
-Questo portfolio è distribuito sotto la licenza [Nome della Licenza]. Vedi il file LICENSE per ulteriori dettagli.
+- Bootstrap for the responsive framework
+- Font Awesome for the icons
+- Owl Carousel for the skill showcase
+- All other open-source libraries used in this project
