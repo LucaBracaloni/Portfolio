@@ -12,7 +12,7 @@
     // Track Web Vitals
     vitals('web-vitals', {
         path: window.location.pathname,
-        analyticsId: 'YOUR_ANALYTICS_ID', // Questo verrà configurato automaticamente da Vercel
+        analyticsId: process.env.NEXT_PUBLIC_VERCEL_ANALYTICS_ID,
         debug: false
     });
 })(); 
