@@ -512,7 +512,7 @@ a:hover, a:active, a:focus {
 
 .specialty-item i {
   font-size: 32px;
-  color: var(--primary-color);
+  color: var(--contrast-color);
   margin-bottom: 15px;
   display: block;
 }
@@ -607,6 +607,7 @@ a:hover, a:active, a:focus {
 .about-info ul li i {
      margin-right: 10px;
      font-size: 18px;
+     color: var(--contrast-color);
 }
 
 
@@ -1170,12 +1171,12 @@ footer .copyright-text {
 
 .skill-icon i {
     font-size: 35px;
-    color: var(--primary-color);
+    color: var(--contrast-color);
     transition: all 0.4s ease;
 }
 
 .soft-skill-item:hover .skill-icon i {
-    color: var(--white);
+    color: var(--contrast-color);
 }
 
 .soft-skill-item h3 {
@@ -1234,4 +1235,85 @@ footer .copyright-text {
     .soft-skill-item p {
         font-size: 14px;
     }
+}
+
+/* CV Section Styles */
+#cv {
+     padding: 100px 0;
+     background: var(--background-light);
+}
+
+.cv-container {
+     background: var(--white);
+     border-radius: 15px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+     overflow: hidden;
+     margin-top: 30px;
+}
+
+.cv-preview {
+     width: 100%;
+     background: var(--white);
+     border-bottom: 1px solid var(--border-color);
+}
+
+.cv-preview iframe {
+     display: block;
+     width: 100%;
+     height: 700px;
+     border: none;
+     margin-top: 40px;
+}
+
+.cv-actions {
+     padding: 20px;
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     background: var(--white);
+}
+
+.download-btn, .view-btn {
+     display: inline-flex;
+     align-items: center;
+     padding: 12px 25px;
+     border-radius: 5px;
+     color: var(--white);
+     text-decoration: none;
+     transition: all 0.3s ease;
+     font-weight: 500;
+}
+
+.download-btn {
+     background: var(--primary-color);
+}
+
+.view-btn {
+     background: var(--contrast-color);
+}
+
+.download-btn:hover, .view-btn:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+     color: var(--white);
+}
+
+.download-btn i, .view-btn i {
+     margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+     .cv-actions {
+          flex-direction: column;
+          gap: 10px;
+     }
+     
+     .download-btn, .view-btn {
+          width: 100%;
+          justify-content: center;
+     }
+     
+     .cv-preview iframe {
+          height: 500px;
+     }
 }
