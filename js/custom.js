@@ -46,34 +46,4 @@
             Speedfast: 200,
         });
 
-        // Theme toggle functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('theme-toggle');
-            const icon = themeToggle.querySelector('i');
-            
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-theme');
-                icon.classList.remove('fa-sun-o');
-                icon.classList.add('fa-moon-o');
-            }
-
-            // Theme toggle click handler
-            themeToggle.addEventListener('click', function() {
-                document.body.classList.toggle('dark-theme');
-                
-                // Update icon
-                if (document.body.classList.contains('dark-theme')) {
-                    icon.classList.remove('fa-sun-o');
-                    icon.classList.add('fa-moon-o');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    icon.classList.remove('fa-moon-o');
-                    icon.classList.add('fa-sun-o');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-        });
-
 })(jQuery);

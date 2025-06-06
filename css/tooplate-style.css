@@ -1050,39 +1050,6 @@ footer .copyright-text {
   }
 }
 
-/* Remove dark mode specific styles */
-[data-theme="dark"] body,
-[data-theme="dark"] .custom-navbar,
-[data-theme="dark"] .custom-navbar .navbar-brand,
-[data-theme="dark"] .custom-navbar .nav li a,
-[data-theme="dark"] #contact,
-[data-theme="dark"] .contact-info,
-[data-theme="dark"] .contact-form,
-[data-theme="dark"] .contact-item h3,
-[data-theme="dark"] .contact-item p,
-[data-theme="dark"] .contact-item a,
-[data-theme="dark"] footer,
-[data-theme="dark"] .footer-info h2,
-[data-theme="dark"] .footer-info p,
-[data-theme="dark"] .social-icon li a,
-[data-theme="dark"] .copyright-text,
-[data-theme="dark"] .copyright-text p,
-[data-theme="dark"] .section-title h1,
-[data-theme="dark"] .about-info h3,
-[data-theme="dark"] .about-info p,
-[data-theme="dark"] .project-overlay,
-[data-theme="dark"] .team-overlay,
-[data-theme="dark"] .skill-description,
-[data-theme="dark"] .skill-description p,
-[data-theme="dark"] .skill-description ul li {
-     /* Remove all dark mode overrides */
-}
-
-/* Remove theme toggle styles */
-.theme-toggle {
-     /* Remove theme toggle styles */
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
      .skill-description {
@@ -1235,16 +1202,6 @@ footer .copyright-text {
     .soft-skill-item p {
         font-size: 14px;
     }
-}
-
-/* Remove CV Section Styles */
-#cv,
-.cv-container,
-.cv-preview,
-.cv-actions,
-.download-btn,
-.view-btn {
-     /* Remove all CV related styles */
 }
 
 /* Experience Timeline Section */
