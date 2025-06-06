@@ -35,15 +35,35 @@
 
         // Owl Carousel
         var owl = $("#owl-team");
-          owl.owlCarousel({
-            autoPlay: 6000,
-            items : 4,
-            itemsDesktop : [1199,3],
-            itemsDesktopSmall : [979,3],
-            itemsTablet: [768,2],
-            itemsTabletSmall: false,
-            itemsMobile : [479,1],
-            Speedfast: 200,
+        owl.owlCarousel({
+            loop: true,
+            margin: 20,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                479: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            },
+            nav: true,
+            dots: true,
+            mouseDrag: true,
+            touchDrag: true,
+            pullDrag: true,
+            freeDrag: false
         });
 
 })(jQuery);

@@ -1360,3 +1360,17 @@ footer .copyright-text {
           text-align: left;
      }
 }
+
+/* Add touch handling styles */
+.owl-carousel {
+    touch-action: pan-y pinch-zoom;
+    -webkit-overflow-scrolling: touch;
+}
+
+.owl-carousel .owl-stage {
+    touch-action: pan-y pinch-zoom;
+}
+
+.owl-carousel .owl-item {
+    touch-action: pan-y pinch-zoom;
+}
