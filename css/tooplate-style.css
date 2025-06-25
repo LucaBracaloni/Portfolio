@@ -344,7 +344,13 @@ a:hover, a:active, a:focus {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
   .custom-navbar .navbar-header {
     float: none;
   }
@@ -354,9 +360,6 @@ a:hover, a:active, a:focus {
   .custom-navbar .navbar-collapse {
     border-top: 1px solid #e7e7e7;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .custom-navbar .navbar-collapse.collapse {
-    display: none!important;
   }
   .custom-navbar .navbar-nav {
     float: none!important;
