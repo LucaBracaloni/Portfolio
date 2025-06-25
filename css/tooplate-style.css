@@ -703,6 +703,7 @@ a:hover, a:active, a:focus {
      width: 100%;
      margin-bottom: 22px;
      text-align: center;
+     padding: 2%;
 }
 
 #team h3,
@@ -1083,7 +1084,7 @@ footer .copyright-text {
 /* Responsive adjustments */
 @media (max-width: 768px) {
      .skill-description {
-          padding: 10px;
+          font-size: 13px;
      }
      
      .skill-description p,
@@ -1429,7 +1430,6 @@ footer .copyright-text {
         margin: 0 auto;
     }
     .skill-description {
-        padding: 10px 0;
         font-size: 13px;
     }
     #team h3, #team p {
