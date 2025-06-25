@@ -344,6 +344,33 @@ a:hover, a:active, a:focus {
   }
 }
 
+@media (max-width: 1200px) {
+  .custom-navbar .navbar-header {
+    float: none;
+  }
+  .custom-navbar .navbar-toggle {
+    display: block;
+  }
+  .custom-navbar .navbar-collapse {
+    border-top: 1px solid #e7e7e7;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .custom-navbar .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .custom-navbar .navbar-nav {
+    float: none!important;
+    margin: 7.5px -15px;
+  }
+  .custom-navbar .navbar-nav>li {
+    float: none;
+  }
+  .custom-navbar .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
 
 /*---------------------------------------
   HOME             
@@ -1373,4 +1400,69 @@ footer .copyright-text {
 
 .owl-carousel .owl-item {
     touch-action: pan-y pinch-zoom;
+}
+
+@media (max-width: 768px) {
+    #team .item {
+        margin-bottom: 32px;
+        padding: 0 10px;
+        width: 100% !important;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .team-item {
+        width: 100% !important;
+        max-width: 250px;
+        height: auto;
+        min-height: 150px;
+        margin: 0 auto 16px auto;
+        padding: 10px 0;
+    }
+    .team-item img {
+        width: 100%;
+        height: auto;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    .skill-description {
+        padding: 10px 0;
+        font-size: 13px;
+    }
+    #team h3, #team p {
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .owl-carousel {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #team-items.team-flex-grid {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 32px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #team-items .item {
+        flex: 1 1 0;
+        max-width: 320px;
+        min-width: 220px;
+        margin: 0;
+    }
+    #owl-team {
+        display: none !important;
+    }
+}
+@media (max-width: 1199px) {
+    #team-items.team-flex-grid {
+        display: none !important;
+    }
+    #owl-team {
+        display: block !important;
+    }
 }

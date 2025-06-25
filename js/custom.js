@@ -35,35 +35,40 @@
 
         // Owl Carousel
         var owl = $("#owl-team");
-        owl.owlCarousel({
-            loop: true,
-            margin: 20,
-            autoplay: true,
-            autoplayTimeout: 6000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
+        function setOwlOptions() {
+            var isDesktop = window.innerWidth >= 992;
+            owl.trigger('destroy.owl.carousel');
+            owl.owlCarousel({
+                loop: true,
+                margin: 20,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: { items: 1 },
+                    480: { items: 1 },
+                    768: { items: 1 },
+                    991: { items: 1 },
+                    992: { items: 3 },
+                    1200: { items: 4 }
                 },
-                479: {
-                    items: 1
-                },
-                768: {
-                    items: 2
-                },
-                979: {
-                    items: 3
-                },
-                1199: {
-                    items: 4
-                }
-            },
-            nav: true,
-            dots: true,
-            mouseDrag: true,
-            touchDrag: true,
-            pullDrag: true,
-            freeDrag: false
+                nav: !isDesktop,
+                dots: !isDesktop,
+                mouseDrag: true,
+                touchDrag: true,
+                pullDrag: true,
+                freeDrag: false
+            });
+            // Nascondi dots se desktop (per sicurezza)
+            if(isDesktop) {
+                $("#owl-team .owl-dots, #owl-team .owl-nav").hide();
+            } else {
+                $("#owl-team .owl-dots, #owl-team .owl-nav").show();
+            }
+        }
+        setOwlOptions();
+        $(window).on('resize', function() {
+            setTimeout(setOwlOptions, 300);
         });
 
 })(jQuery);
