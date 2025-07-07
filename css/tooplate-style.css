@@ -538,6 +538,7 @@ a:hover, a:active, a:focus {
 .specialty-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
 .specialty-item i {
@@ -791,6 +792,7 @@ a:hover, a:active, a:focus {
 .contact-info:hover {
      transform: translateY(-5px);
      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+     cursor: pointer;
 }
 
 .contact-item {
@@ -1131,6 +1133,7 @@ footer .copyright-text {
 .soft-skill-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .soft-skill-item::before {
@@ -1318,6 +1321,7 @@ footer .copyright-text {
 .timeline-content:hover {
      transform: translateY(-5px);
      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+     cursor: pointer;
 }
 
 .timeline-content h3 {
