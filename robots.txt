@@ -4,4 +4,4 @@ User-agent: *
 Disallow:
 
 # Indica la posizione della sitemap
-Sitemap: https://tuosito.com/sitemap.xml
+Sitemap: https://www.lucabracaloni.it/sitemap.xml
