@@ -197,8 +197,9 @@ a:hover, a:active, a:focus {
 }
 
 .parallax-section {
-  background-attachment: fixed !important;
+  /* background-attachment: fixed !important; */
   background-size: cover !important;
+  min-height: 400px;
 }
 
 #about, #project,
@@ -1470,4 +1471,29 @@ footer .copyright-text {
     #owl-team {
         display: block !important;
     }
+}
+
+/* Riduzione CLS per #team e #soft-skills */
+#team .team-item,
+.soft-skill-item {
+  min-height: 220px;
+}
+
+#team .team-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.soft-skill-item .skill-icon {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  min-height: 80px;
+}
+
+.skill-progress {
+  min-width: 100%;
+  min-height: 6px;
 }
