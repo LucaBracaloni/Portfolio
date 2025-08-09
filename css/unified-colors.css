@@ -1,0 +1,386 @@
+/* ==========================================================================
+   Unified Color Palette based on Home section gradient
+   Colors extracted from: linear-gradient(135deg, rgba(77, 196, 125, 0.9), rgba(26, 75, 110, 0.9))
+   ========================================================================== */
+
+:root {
+  /* Primary Colors from your gradient */
+  --gradient-green: #4dc47d;
+  --gradient-green-light: #5ed48e;
+  --gradient-green-dark: #3da86a;
+  --gradient-blue: #1a4b6e;
+  --gradient-blue-light: #2a5b7e;
+  --gradient-blue-dark: #0d2b4a;
+  
+  /* Supporting Colors */
+  --gradient-accent: #93d48e;
+  --text-dark: #0d2b4a;
+  --text-light: #5a7a8a;
+  --white: #ffffff;
+  --background-light: #f8fafb;
+  --overlay-dark: rgba(13, 43, 74, 0.7);
+  --overlay-light: rgba(77, 196, 125, 0.1);
+}
+
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
+/* Default transparent navbar */
+.custom-navbar {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 10px rgba(26, 75, 110, 0.2) !important;
+}
+
+/* Navbar with gradient when scrolled */
+.custom-navbar.top-nav-collapse {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 10px rgba(26, 75, 110, 0.2) !important;
+}
+
+.custom-navbar .navbar-brand {
+  color: var(--white) !important;
+}
+
+.custom-navbar .navbar-nav>li>a:hover,
+.custom-navbar .navbar-nav>li>a:focus {
+  color: var(--gradient-accent) !important;
+}
+
+.custom-navbar .nav li.active>a:after,
+.custom-navbar .navbar-nav li a:hover:after {
+  background: var(--gradient-accent) !important;
+}
+
+/* Mobile navbar styling aligned with desktop */
+@media (max-width: 767px) {
+  .custom-navbar {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 10px rgba(26, 75, 110, 0.2) !important;
+  }
+  
+  .custom-navbar.top-nav-collapse {
+    background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: 0 2px 10px rgba(26, 75, 110, 0.2) !important;
+  }
+  
+  /* Ensure mobile menu toggle is always visible */
+  .custom-navbar .navbar-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 4px !important;
+  }
+  
+  .custom-navbar .navbar-toggle:hover,
+  .custom-navbar .navbar-toggle:focus {
+    background: rgba(255, 255, 255, 0.2) !important;
+  }
+}
+
+/* Enhanced navbar styling for better visibility */
+.custom-navbar .navbar-toggle .icon-bar {
+  background: var(--white) !important;
+}
+
+.custom-navbar .navbar-brand span {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.custom-navbar .nav li a {
+  color: var(--white) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ==========================================================================
+   Sections Background
+   ========================================================================== */
+#about {
+  background: linear-gradient(135deg, 
+    rgba(77, 196, 125, 0.05) 0%, 
+    rgba(26, 75, 110, 0.05) 100%),
+    var(--white) !important;
+}
+
+#team {
+  background: linear-gradient(135deg, 
+    rgba(26, 75, 110, 0.03) 0%, 
+    rgba(77, 196, 125, 0.03) 100%),
+    var(--background-light) !important;
+}
+
+#soft-skills {
+  background: linear-gradient(135deg, 
+    rgba(77, 196, 125, 0.08) 0%, 
+    rgba(26, 75, 110, 0.08) 100%),
+    var(--background-light) !important;
+}
+
+#experience {
+  background: linear-gradient(135deg, 
+    rgba(26, 75, 110, 0.05) 0%, 
+    rgba(77, 196, 125, 0.05) 100%),
+    var(--white) !important;
+}
+
+#contact {
+  background: linear-gradient(135deg, 
+    rgba(77, 196, 125, 0.1) 0%, 
+    rgba(26, 75, 110, 0.1) 100%),
+    var(--background-light) !important;
+}
+
+/* ==========================================================================
+   Buttons and Interactive Elements
+   ========================================================================== */
+.section-btn a span,
+.section-btn button span {
+  background: linear-gradient(135deg, var(--gradient-blue) 0%, var(--gradient-green) 100%) !important;
+}
+
+.section-btn a:hover span,
+.section-btn a:focus span,
+.section-btn button:hover span,
+.section-btn button:focus span {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.csstransforms3d .section-btn a span::before,
+.csstransforms3d .section-btn button span::before {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+/* ==========================================================================
+   Cards and Content Areas
+   ========================================================================== */
+.about-content,
+.contact-info,
+.soft-skill-item,
+.timeline-content {
+  box-shadow: 0 10px 30px rgba(26, 75, 110, 0.1) !important;
+  border: 1px solid rgba(77, 196, 125, 0.1) !important;
+}
+
+.about-content:hover,
+.contact-info:hover,
+.soft-skill-item:hover,
+.timeline-content:hover {
+  box-shadow: 0 15px 40px rgba(26, 75, 110, 0.15) !important;
+  border-color: rgba(77, 196, 125, 0.2) !important;
+}
+
+/* ==========================================================================
+   Accents and Highlights
+   ========================================================================== */
+.section-divider {
+  background: linear-gradient(90deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.section-divider:before,
+.section-divider:after {
+  background: linear-gradient(90deg, var(--gradient-blue) 0%, var(--gradient-green) 100%) !important;
+}
+
+/* ==========================================================================
+   Icons and Special Elements
+   ========================================================================== */
+.specialty-item i,
+.contact-item i {
+  color: var(--gradient-blue) !important;
+}
+
+.specialty-item:hover i,
+.contact-info:hover .contact-item i {
+  color: var(--gradient-green) !important;
+}
+
+.soft-skill-item .skill-icon {
+  background: linear-gradient(135deg, 
+    rgba(77, 196, 125, 0.1) 0%, 
+    rgba(26, 75, 110, 0.1) 100%) !important;
+}
+
+.soft-skill-item:hover .skill-icon {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.soft-skill-item .skill-icon i {
+  color: var(--gradient-blue) !important;
+}
+
+.soft-skill-item:hover .skill-icon i {
+  color: var(--white) !important;
+}
+
+/* ==========================================================================
+   Progress Bars and Animations
+   ========================================================================== */
+.progress-bar,
+.skill-progress .progress-bar {
+  background: linear-gradient(90deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.soft-skill-item::before {
+  background: linear-gradient(90deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+/* ==========================================================================
+   Timeline
+   ========================================================================== */
+.timeline::after {
+  background: linear-gradient(180deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.timeline-dot {
+  background: var(--gradient-blue) !important;
+  border-color: var(--gradient-green) !important;
+}
+
+.timeline-content h3 {
+  color: var(--gradient-blue) !important;
+}
+
+.timeline-content h4 {
+  color: var(--gradient-green) !important;
+}
+
+.timeline-tags span {
+  background: rgba(77, 196, 125, 0.1) !important;
+  color: var(--gradient-blue) !important;
+  border: 1px solid rgba(77, 196, 125, 0.2) !important;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+}
+
+.social-icon li a {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.social-icon li a:hover {
+  background: var(--white) !important;
+  color: var(--gradient-blue) !important;
+  transform: translateY(-3px) scale(1.1) !important;
+}
+
+/* ==========================================================================
+   Text Colors
+   ========================================================================== */
+/* Keep HOME and FOOTER text white */
+#home h1, #home h2, #home p,
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p {
+  color: var(--white) !important;
+}
+
+/* Other sections use dark text */
+#about h1, #about h2, #about h3, #about h4, #about h5, #about h6,
+#team h1, #team h2, #team h3, #team h4, #team h5, #team h6,
+#soft-skills h1, #soft-skills h2, #soft-skills h3, #soft-skills h4, #soft-skills h5, #soft-skills h6,
+#experience h1, #experience h2, #experience h3, #experience h4, #experience h5, #experience h6,
+#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
+  color: var(--text-dark) !important;
+}
+
+#about p, #team p, #soft-skills p, #experience p, #contact p, .text-light {
+  color: var(--text-light) !important;
+}
+
+/* ==========================================================================
+   Links and Interactive Text
+   ========================================================================== */
+a {
+  color: var(--gradient-blue) !important;
+}
+
+a:hover, a:focus {
+  color: var(--gradient-green) !important;
+}
+
+/* ==========================================================================
+   Team Section Special Styling - Keep original image style
+   ========================================================================== */
+.team-item {
+  overflow: hidden;
+  position: relative;
+  margin: 34px auto 16px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-item img {
+  transition: all .3s ease;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Remove added borders and styling */
+}
+
+.team-item:hover img {
+  transform: scale(1.1);
+  /* Remove added shadows and borders */
+}
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+.contact-form .form-control:focus {
+  border-color: var(--gradient-green) !important;
+  box-shadow: 0 0 0 0.2rem rgba(77, 196, 125, 0.25) !important;
+}
+
+.contact-form .btn-primary {
+  background: linear-gradient(135deg, var(--gradient-blue) 0%, var(--gradient-green) 100%) !important;
+  border: none !important;
+}
+
+.contact-form .btn-primary:hover {
+  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(26, 75, 110, 0.3) !important;
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+  .section-divider:before,
+  .section-divider:after {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Additional Gradient Overlays for Visual Depth
+   ========================================================================== */
+.about-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gradient-green) 0%, var(--gradient-blue) 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+/* Remove the gradient line from contact-info boxes */
+/* .contact-info::before - REMOVED */
+
+/* Ensure positioning context */
+.about-content {
+  position: relative;
+}

@@ -774,7 +774,6 @@ a:hover, a:active, a:focus {
 
 /* Contact Section Styles */
 #contact {
-     padding: 100px 0;
      background: var(--background-light);
 }
 
@@ -955,46 +954,6 @@ footer h4 {
 footer a {
   color: #757575;
 }
-
-footer .copyright-text {
-  padding-top: 42px;
-}
-
-
-/*---------------------------------------
-  SOCIAL ICON             
------------------------------------------*/
-
-.social-icon {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.social-icon li {
-  display: inline-block;
-  list-style: none;
-}
-
-.social-icon li a {
-  border-radius: 100%;
-  color: #292929;
-  cursor: pointer;
-  font-size: 18px;
-  text-decoration: none;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-  text-align: center;
-  position: relative;
-  margin: 4px 8px 0 8px;
-}
-
-.social-icon li a:hover {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
 
 /*---------------------------------------
   MOBILE RESPONSIVE              
@@ -1491,9 +1450,4 @@ footer .copyright-text {
   height: 80px;
   min-width: 80px;
   min-height: 80px;
-}
-
-.skill-progress {
-  min-width: 100%;
-  min-height: 6px;
 }

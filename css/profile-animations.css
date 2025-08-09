@@ -1,0 +1,462 @@
+/* Profile Image 3D Animations */
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1%;
+}
+
+.profile-image-3d {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.profile-image-3d:hover {
+  transform: scale(1.02);
+}
+
+.profile-image-3d:hover .floating-elements {
+  animation: gentleContainerSpin 4s ease-in-out infinite;
+}
+
+.profile-image-3d:hover .floating-icon {
+  animation: smoothOrbit 15s linear infinite, hoverFloat 3s ease-in-out infinite;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  animation: subtleBreathing 4s ease-in-out infinite;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-image-3d:hover .profile-image {
+  transform: scale(1.03);
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0 0 40px rgba(77, 196, 125, 0.3);
+  animation: subtleBreathing 4s ease-in-out infinite, hoverGlow 2s ease-in-out infinite;
+}
+
+/* Subtle Breathing Animation - Very gentle movement for center image */
+@keyframes subtleBreathing {
+  0%, 100% { 
+    transform: scale(1) translateY(0px); 
+  }
+  50% { 
+    transform: scale(1.02) translateY(-3px); 
+  }
+}
+
+/* Removed complex 3D rotations - keeping image stable */
+/* Only the floating icons will have orbital motion */
+
+/* New hover animations */
+@keyframes gentleContainerSpin {
+  0%, 100% { 
+    transform: translate(-50%, -50%) rotateZ(0deg) scale(1);
+  }
+  50% { 
+    transform: translate(-50%, -50%) rotateZ(180deg) scale(1.05);
+  }
+}
+
+@keyframes hoverFloat {
+  0%, 100% { 
+    transform: translateZ(0px) scale(1);
+  }
+  50% { 
+    transform: translateZ(15px) scale(1.1);
+  }
+}
+
+@keyframes hoverGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 25px 70px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(77, 196, 125, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 30px 80px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      0 0 60px rgba(77, 196, 125, 0.5);
+  }
+}
+
+/* Floating Tech Icons */
+.floating-elements {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.floating-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4dc47d, #1a4b6e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: smoothOrbit 20s linear infinite;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.floating-icon i {
+  /* L'icona rimane fissa senza ruotare - completamente stabile */
+  transform: rotate(0deg) !important;
+  transition: none;
+}
+
+.icon-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.icon-2 {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  animation-delay: -3.75s;
+}
+
+.icon-3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: -7.5s;
+}
+
+.icon-4 {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation-delay: -11.25s;
+}
+
+/* Smooth Orbit Animation */
+@keyframes smoothOrbit {
+  0% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(120px) rotateZ(0deg) rotateY(0deg);
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(120px) rotateZ(-360deg) rotateY(360deg);
+  }
+}
+
+/* Orbit animation for smaller screens */
+@keyframes smoothOrbitSmall {
+  0% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(70px) rotateZ(0deg) rotateY(0deg);
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(70px) rotateZ(-360deg) rotateY(360deg);
+  }
+}
+
+/* Orbit animation for very small screens */
+@keyframes smoothOrbitTiny {
+  0% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(60px) rotateZ(0deg) rotateY(0deg);
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(60px) rotateZ(-360deg) rotateY(360deg);
+  }
+}
+
+/* Glowing Effect - More controlled */
+.profile-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #4dc47d, #1a4b6e, #4dc47d);
+  border-radius: 50%;
+  z-index: -1;
+  animation: softGlow 6s ease-in-out infinite alternate;
+  opacity: 0.6;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.profile-image-3d:hover .profile-image::before {
+  animation: hoverGlow 3s ease-in-out infinite alternate;
+  opacity: 0.8;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+}
+
+@keyframes softGlow {
+  0% { 
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  100% { 
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes hoverGlow {
+  0% { 
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+  100% { 
+    opacity: 0.9;
+    transform: scale(1.06);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .profile-image {
+    width: 220px;
+    height: 220px;
+    animation: subtleBreathing 5s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    animation: smoothOrbit 25s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-image-container {
+    padding-top: 10vh;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    animation: subtleBreathing 6s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .floating-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+    animation: smoothOrbitSmall 30s linear infinite;
+  }
+  
+  /* Riduco gli effetti hover su mobile per le performance */
+  .profile-image-3d:hover .floating-elements {
+    animation: gentleContainerSpin 6s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 990px) {
+  .profile-image-container {
+    padding-top: 10vh;
+  }
+  
+  .profile-image {
+    width: 170px;
+    height: 170px;
+    animation: subtleBreathing 7s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .floating-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+    animation: smoothOrbitTiny 35s linear infinite;
+  }
+  
+  /* Disabilito alcuni effetti hover sui dispositivi molto piccoli */
+  .profile-image-3d:hover .floating-icon {
+    animation: smoothOrbitTiny 30s linear infinite;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 580px) {
+  .profile-image-container {
+    padding-top: 10vh;
+  }
+  
+  .profile-image {
+    width: 170px;
+    height: 170px;
+    animation: subtleBreathing 7s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .floating-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+    animation: smoothOrbitTiny 35s linear infinite;
+  }
+  
+  /* Disabilito alcuni effetti hover sui dispositivi molto piccoli */
+  .profile-image-3d:hover .floating-icon {
+    animation: smoothOrbitTiny 30s linear infinite;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image-container {
+    padding-top: 10vh;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    animation: subtleBreathing 8s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .floating-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+    animation: smoothOrbitTiny 40s linear infinite;
+  }
+  
+  /* Effetti hover molto ridotti per dispositivi piccolissimi */
+  .profile-image-3d:hover .floating-icon {
+    animation: smoothOrbitTiny 35s linear infinite;
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 375px) {
+  .profile-image-container {
+    padding-top: 10vh;
+  }
+  
+  .profile-image {
+    width: 130px;
+    height: 130px;
+    animation: subtleBreathing 9s ease-in-out infinite;
+  }
+  
+  .floating-elements {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .floating-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 10px;
+    animation: smoothOrbitTiny 45s linear infinite;
+  }
+  
+  /* Animazioni molto soft per dispositivi piccolissimi */
+  .profile-image-3d:hover .floating-icon {
+    animation: smoothOrbitTiny 40s linear infinite;
+    transform: scale(1.02);
+  }
+  
+  .profile-image-3d:hover .profile-image {
+    animation: subtleBreathing 8s ease-in-out infinite;
+    transform: scale(1.01);
+  }
+}
+
+/* Background gradient for home section without video */
+#home {
+  background: linear-gradient(135deg, 
+    rgba(77, 196, 125, 0.9) 0%, 
+    rgba(26, 75, 110, 0.9) 100%),
+    radial-gradient(circle at 30% 20%, rgba(93, 212, 142, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(13, 43, 74, 0.3) 0%, transparent 50%);
+  background-size: 100% 100%, 60% 60%, 60% 60%;
+  background-position: center, top left, bottom right;
+  background-attachment: fixed;
+}
+
+/* Particle effect background */
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.2), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particles 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes particles {
+  0% { 
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% { 
+    background-position: 200px 100px, -200px 200px, 300px -100px, -300px 300px, 400px -200px;
+  }
+}
