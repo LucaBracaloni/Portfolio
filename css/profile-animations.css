@@ -178,23 +178,33 @@
   }
 }
 
-/* Orbit animation for smaller screens */
+/* Orbit animation for smaller screens - orbite più vicine */
 @keyframes smoothOrbitSmall {
   0% { 
-    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(70px) rotateZ(0deg) rotateY(0deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(50px) rotateZ(0deg) rotateY(0deg);
   }
   100% { 
-    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(70px) rotateZ(-360deg) rotateY(360deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(50px) rotateZ(-360deg) rotateY(360deg);
   }
 }
 
-/* Orbit animation for very small screens */
+/* Orbit animation for very small screens - orbite molto più vicine */
 @keyframes smoothOrbitTiny {
   0% { 
-    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(60px) rotateZ(0deg) rotateY(0deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(40px) rotateZ(0deg) rotateY(0deg);
   }
   100% { 
-    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(60px) rotateZ(-360deg) rotateY(360deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(40px) rotateZ(-360deg) rotateY(360deg);
+  }
+}
+
+/* Orbit animation for extra small screens - orbite estremamente vicine */
+@keyframes smoothOrbitExtraTiny {
+  0% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(0deg) translateX(35px) rotateZ(0deg) rotateY(0deg);
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-50%) rotateZ(360deg) translateX(35px) rotateZ(-360deg) rotateY(360deg);
   }
 }
 
@@ -278,14 +288,14 @@
   }
   
   .floating-elements {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
   
   .floating-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 17px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
     animation: smoothOrbitSmall 30s linear infinite;
   }
   
@@ -307,20 +317,20 @@
   }
   
   .floating-elements {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
   
   .floating-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 13px;
-    animation: smoothOrbitTiny 35s linear infinite;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    animation: smoothOrbitSmall 35s linear infinite;
   }
   
   /* Disabilito alcuni effetti hover sui dispositivi molto piccoli */
   .profile-image-3d:hover .floating-icon {
-    animation: smoothOrbitTiny 30s linear infinite;
+    animation: smoothOrbitSmall 30s linear infinite;
     transform: scale(1.05);
   }
 }
@@ -337,14 +347,14 @@
   }
   
   .floating-elements {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
   }
   
   .floating-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 13px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
     animation: smoothOrbitTiny 35s linear infinite;
   }
   
@@ -367,8 +377,8 @@
   }
   
   .floating-elements {
-    width: 160px;
-    height: 160px;
+    width: 145px;
+    height: 145px;
   }
   
   .floating-icon {
@@ -397,8 +407,8 @@
   }
   
   .floating-elements {
-    width: 140px;
-    height: 140px;
+    width: 125px;
+    height: 125px;
   }
   
   .floating-icon {

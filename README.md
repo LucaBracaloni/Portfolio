@@ -33,6 +33,10 @@ Welcome to my professional portfolio website! This repository showcases my work 
 - **LinkedIn**: https://www.linkedin.com/in/luca-bracaloni-ba7346250/
 - **Website**: https://www.lucabracaloni.it/
 
+## Version
+
+> 2.0.0
+
 ## License
 
 **This portfolio is open source and available under the MIT License. Feel free to use it as a template for your own portfolio, but please provide appropriate attribution.**
