@@ -1,14 +1,15 @@
 /* ==========================================================================
    Unified Color Palette based on Home section gradient
-   Colors extracted from: linear-gradient(135deg, rgba(77, 196, 125, 0.9), rgba(26, 75, 110, 0.9))
    ========================================================================== */
 
 :root {
   /* Primary Colors from your gradient */
   --gradient-green: #4dc47d;
+  --gradient-green-transparency: #4dc47d54;
   --gradient-green-light: #5ed48e;
   --gradient-green-dark: #3da86a;
   --gradient-blue: #1a4b6e;
+  --gradient-blue-transparency: #1a4b6e7e;
   --gradient-blue-light: #2a5b7e;
   --gradient-blue-dark: #0d2b4a;
   
@@ -288,7 +289,7 @@ footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p {
 #team h1, #team h2, #team h3, #team h4, #team h5, #team h6,
 #soft-skills h1, #soft-skills h2, #soft-skills h3, #soft-skills h4, #soft-skills h5, #soft-skills h6,
 #experience h1, #experience h2, #experience h3, #experience h4, #experience h5, #experience h6,
-#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
+#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6, #partners h1, #partners h2, #partners h3, #partners h4, #partners h5, #partners h6{
   color: var(--text-dark) !important;
 }
 
