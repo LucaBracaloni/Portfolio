@@ -2,13 +2,10 @@
 
     "use strict";
 
-        // PRE LOADER
         $(window).load(function(){
           $('.preloader').delay(500).slideUp('slow'); // set duration in brackets    
         });
 
-
-        // MENU
         $('.navbar-collapse a').on('click', function(){
           $('.navbar-collapse').collapse('hide');
         });
@@ -21,8 +18,6 @@
               }
         });
 
-
-        // PARALLAX JS
         function initParallax() {
           $('#home').parallax("60%", 100);
           $('#about').parallax("100%", 80);
@@ -32,8 +27,6 @@
           }
         initParallax();
 
-
-        // Owl Carousel
         var owl = $("#owl-team");
         function setOwlOptions() {
             var isDesktop = window.innerWidth >= 992;
@@ -59,7 +52,6 @@
                 pullDrag: true,
                 freeDrag: false
             });
-            // Nascondi dots se desktop (per sicurezza)
             if(isDesktop) {
                 $("#owl-team .owl-dots, #owl-team .owl-nav").hide();
             } else {

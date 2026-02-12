@@ -25,7 +25,6 @@ http://www.gnu.org/licenses/gpl.html
 		var firstTop;
 		var paddingTop = 0;
 		
-		//get the starting position of each element to have parallax applied to it	
 		function update (){
 			
 			$this.each(function(){
@@ -43,12 +42,10 @@ http://www.gnu.org/licenses/gpl.html
 				};
 			}
 				
-			// setup defaults if arguments aren't specified
 			if (arguments.length < 1 || xpos === null) xpos = "50%";
 			if (arguments.length < 2 || speedFactor === null) speedFactor = 0.5;
 			if (arguments.length < 3 || outerHeight === null) outerHeight = true;
 			
-			// function to be called whenever the window is scrolled or resized
 			
 				var pos = $window.scrollTop();				
 	
@@ -57,13 +54,11 @@ http://www.gnu.org/licenses/gpl.html
 					var top = $element.offset().top;
 					var height = getHeight($element);
 	
-					// Check if totally above or totally below viewport
 					if (top + height < pos || top > pos + windowHeight) {
 						return;
 					}
 					
 					$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
-					
 				});
 		}		
 
