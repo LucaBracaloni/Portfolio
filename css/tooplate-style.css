@@ -1,86 +1,60 @@
-/*
-
-Template 2099 Scenic
-
-http://www.tooplate.com/view/2099-scenic
-
-*/
-
-
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700');
 
 /* Root Variables */
 :root {
-     --primary-color: #4dc47d;
-     --primary-dark: #3da86a;
-     --primary-light: #5ed48e;
-     --contrast-color: #1a4b6e;
-     --contrast-dark: #0d2b4a;
-     --text-dark: #2c3e50;
-     --text-light: #7f8c8d;
-     --background-light: #f8f9fa;
-     --white: #ffffff;
-     --border-color: #e9ecef;
-     --card-bg: #ffffff;
-     --overlay-color: rgba(0, 0, 0, 0.5);
-     --navbar-bg: var(--primary-color);
-     --footer-bg: var(--primary-color);
+  --primary-color: #4dc47d;
+  --primary-dark: #3da86a;
+  --primary-light: #5ed48e;
+  --contrast-color: #1a4b6e;
+  --contrast-dark: #0d2b4a;
+  --text-dark: #2c3e50;
+  --text-light: #7f8c8d;
+  --background-light: #f8f9fa;
+  --white: #ffffff;
+  --border-color: #e9ecef;
+  --card-bg: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  --navbar-bg: var(--primary-color);
+  --footer-bg: var(--primary-color);
 }
 
 /* Base Styles */
 body {
-     background: var(--white);
-     font-family: 'Source Sans Pro', sans-serif;
-     overflow-x: hidden;
-     color: var(--text-dark);
+  background: var(--white);
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow-x: hidden;
+  color: var(--text-dark);
 }
 
 html, body {
-     width: 100%;
-     height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-/*---------------------------------------
-  TYPOGRAPHY              
------------------------------------------*/
-
-h1,h2,h3,h4,h5,h6 {
-  font-weight: 300;
+#experience h3 {
+  font-weight: 600;
 }
 
-h1 {
-  font-size: 40px;
-  font-weight: 200;
-  line-height: 50px;
+#home h1 {
+  color: white;
+  font-size: 4.5em;
+  position: relative;
+  z-index: 1;
 }
 
-h2 {
-  color: var(--text-light);
-  font-size: 30px;
-  line-height: 40px;
-  margin-top: 0;
+#home h2 {
+  color: white;
+  font-size: 2em;
+  position: relative; 
+  z-index: 1;
 }
 
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 32px;
+#home p {
+  color: white;
+  font-size: 1em;
+  position: relative; 
+  z-index: 1;
 }
-
-h4 {
-  color: #505050;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-p {
-  color: var(--text-light);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 29px;
-  letter-spacing: 0.5px;
-}
-
 
 /*---------------------------------------
   BUTTONS               
@@ -193,11 +167,10 @@ a:hover, a:active, a:focus {
 
 .section-title {
   position: relative;
-  padding-bottom: 22px;
+  padding-bottom: 1vh;
 }
 
 .parallax-section {
-  /* background-attachment: fixed !important; */
   background-size: cover !important;
   min-height: 400px;
 }
@@ -326,10 +299,6 @@ a:hover, a:active, a:focus {
   padding-top: 10px;
 }
 
-.custom-navbar .navbar-toggle {
-  background-color: transparent;
-}
-
 .custom-navbar .navbar-toggle .icon-bar {
   background: #ffffff;
   border-color: transparent;
@@ -345,37 +314,6 @@ a:hover, a:active, a:focus {
   }
 }
 
-@media (max-width: 992px) {
-  .navbar-collapse.collapse {
-    display: none !important;
-  }
-  .navbar-collapse.collapse.in {
-    display: block !important;
-  }
-  .custom-navbar .navbar-header {
-    float: none;
-  }
-  .custom-navbar .navbar-toggle {
-    display: block;
-  }
-  .custom-navbar .navbar-collapse {
-    border-top: 1px solid #e7e7e7;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .custom-navbar .navbar-nav {
-    float: none!important;
-    margin: 7.5px -15px;
-  }
-  .custom-navbar .navbar-nav>li {
-    float: none;
-  }
-  .custom-navbar .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-
 /*---------------------------------------
   HOME             
 -----------------------------------------*/
@@ -388,16 +326,6 @@ a:hover, a:active, a:focus {
   padding-top: 10em;
 }
 
-#home h1 {
-  color: var(--white);
-  font-size: 6em;
-  line-height: 1.2em;
-}
-
-#home p {
-  color: rgba(255, 255, 255, 0.9);
-}
-
 #home .overlay {
   position: absolute;
   top: 0;
@@ -407,6 +335,7 @@ a:hover, a:active, a:focus {
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
+  z-index: 0;
 }
 
 #home video {
@@ -522,7 +451,7 @@ a:hover, a:active, a:focus {
 
 .specialties-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-top: 30px;
 }
@@ -708,7 +637,11 @@ a:hover, a:active, a:focus {
      padding: 2%;
 }
 
-#team h3,
+#team h3 {
+  padding: 1vh;
+  font-weight: 600;
+  font-size: larger;
+}
 #team p {
      margin: 0;
      text-align: center;
@@ -942,11 +875,6 @@ footer {
   FOOTER              
 -----------------------------------------*/
 
-footer {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
 footer h4 {
   padding-top: 12px;
 }
@@ -1067,25 +995,25 @@ footer a {
 /* Soft Skills Section */
 #soft-skills {
     background: var(--background-light);
-    padding: 100px 0;
+    padding: 5%;
 }
 
 .soft-skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
     padding: 40px 0;
 }
 
 .soft-skill-item {
+    text-align: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px;
     background: var(--white);
     padding: 35px;
     border-radius: 15px;
-    text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
+    transition: 0.4s;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .soft-skill-item:hover {
@@ -1250,16 +1178,16 @@ footer a {
 }
 
 .timeline-item:nth-child(even) .timeline-dot {
-     left: -10px;
+  left: -10px;
 }
 
 .timeline-date {
-     position: absolute;
-     width: 120px;
-     right: -140px;
-     top: 12px;
-     font-weight: bold;
-     color: var(--contrast-color);
+  position: absolute;
+  width: 125px;
+  right: -140px;
+  top: 12px;
+  font-weight: bold;
+  color: var(--contrast-color);
 }
 
 .timeline-item:nth-child(even) .timeline-date {
@@ -1370,12 +1298,12 @@ footer a {
 
 @media (max-width: 768px) {
     #team .item {
-        margin-bottom: 32px;
-        padding: 0 10px;
-        width: 100% !important;
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
+      margin-bottom: 32px;
+      padding: 0 10px;
+      width: 100% !important;
+      /* max-width: 350px; */
+      margin-left: auto;
+      margin-right: auto;
     }
     .team-item {
         width: 100% !important;
@@ -1432,6 +1360,31 @@ footer a {
     }
 }
 
+/* Bootstrap 5 Carousel Styles */
+#owl-team .carousel-item {
+    display: none;
+    position: relative;
+    transition: transform 0.6s ease-in-out;
+}
+
+#owl-team .carousel-item.active {
+    display: block;
+}
+
+#owl-team .carousel-indicators {
+    margin-bottom: 1rem;
+    position: relative;
+    bottom: auto;
+}
+
+#owl-team .carousel-indicators button {
+    background-color: var(--primary-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
 /* Riduzione CLS per #team e #soft-skills */
 #team .team-item,
 .soft-skill-item {
@@ -1450,4 +1403,9 @@ footer a {
   height: 80px;
   min-width: 80px;
   min-height: 80px;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }

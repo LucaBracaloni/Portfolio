@@ -1,66 +1,104 @@
-(function ($) {
+(function () {
 
     "use strict";
 
-        $(window).load(function(){
-          $('.preloader').delay(500).slideUp('slow'); // set duration in brackets    
+        window.addEventListener('load', function(){
+          const preloader = document.querySelector('.preloader');
+          if (preloader) {
+            setTimeout(() => preloader.style.display = 'none', 500);
+          }
         });
 
-        $('.navbar-collapse a').on('click', function(){
-          $('.navbar-collapse').collapse('hide');
-        });
-
-        $(window).scroll(function() {
-          if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-              } else {
-                $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        // Bootstrap 5 - chiudere navbar al click sui link (versione semplificata)
+        setTimeout(function() {
+          const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+          navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+              const navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarCollapse?.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                  bsCollapse.hide();
+                }
               }
+            });
+          });
+        }, 500);
+
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector(".navbar");
+          if (navbar && navbar.getBoundingClientRect().top > 50) {
+            document.querySelector(".fixed-top").classList.add("top-nav-collapse");
+          } else {
+            document.querySelector(".fixed-top").classList.remove("top-nav-collapse");
+          }
         });
 
         function initParallax() {
-          $('#home').parallax("60%", 100);
-          $('#about').parallax("100%", 80);
-          $('#project').parallax("80%", 60);
-          $('#team').parallax("40%", 40);
-          $('#contact').parallax("20%", 20);
-          }
+            const parallaxElements = document.querySelectorAll('[data-parallax]');
+            const parallaxEffect = () => {
+                parallaxElements.forEach(element => {
+                    const speed = Number.parseFloat(element.dataset.parallaxSpeed) || 0.5;
+                    const offset = window.pageYOffset * speed;
+                    element.style.transform = `translateY(${offset}px)`;
+                });
+            };
+            window.addEventListener('scroll', parallaxEffect);
+        }
         initParallax();
 
-        var owl = $("#owl-team");
-        function setOwlOptions() {
-            var isDesktop = window.innerWidth >= 992;
-            owl.trigger('destroy.owl.carousel');
-            owl.owlCarousel({
-                loop: true,
-                margin: 20,
-                autoplay: true,
-                autoplayTimeout: 6000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: { items: 1 },
-                    480: { items: 1 },
-                    768: { items: 1 },
-                    991: { items: 1 },
-                    992: { items: 3 },
-                    1200: { items: 4 }
-                },
-                nav: !isDesktop,
-                dots: !isDesktop,
-                mouseDrag: true,
-                touchDrag: true,
-                pullDrag: true,
-                freeDrag: false
-            });
-            if(isDesktop) {
-                $("#owl-team .owl-dots, #owl-team .owl-nav").hide();
-            } else {
-                $("#owl-team .owl-dots, #owl-team .owl-nav").show();
+        // Smooth scroll with easing for navigation links
+        function smoothScrollTo(targetPosition, duration = 800) {
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                
+                // Easing function (ease-in-out)
+                const ease = progress < 0.5 
+                    ? 4 * progress * progress * progress 
+                    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                
+                window.scrollTo(0, startPosition + distance * ease);
+                
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
             }
+
+            requestAnimationFrame(animation);
         }
-        setOwlOptions();
-        $(window).on('resize', function() {
-            setTimeout(setOwlOptions, 300);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+                    const targetPosition = targetElement.offsetTop - navbarHeight;
+                    
+                    smoothScrollTo(targetPosition);
+                }
+            });
         });
 
-})(jQuery);
+        // Initialize Bootstrap carousel for technical skills
+        const owl = document.querySelector("#owl-team");
+        if (owl && typeof bootstrap !== 'undefined' && bootstrap.Carousel) {
+            bootstrap.Carousel.getOrCreateInstance(owl, {
+                interval: 6000,
+                ride: 'carousel',
+                pause: 'hover',
+                wrap: true
+            });
+        }
+
+})();

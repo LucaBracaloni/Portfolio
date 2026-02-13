@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Unified Color Palette based on Home section gradient
-   ========================================================================== */
+  Unified Color Palette based on Home section gradient
+========================================================================== */
 
 :root {
   /* Primary Colors from your gradient */
@@ -24,8 +24,8 @@
 }
 
 /* ==========================================================================
-   Navigation Bar
-   ========================================================================== */
+  Navigation Bar
+========================================================================== */
 /* Default transparent navbar */
 .custom-navbar {
   background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
@@ -138,26 +138,6 @@
 }
 
 /* ==========================================================================
-   Buttons and Interactive Elements
-   ========================================================================== */
-.section-btn a span,
-.section-btn button span {
-  background: linear-gradient(135deg, var(--gradient-blue) 0%, var(--gradient-green) 100%) !important;
-}
-
-.section-btn a:hover span,
-.section-btn a:focus span,
-.section-btn button:hover span,
-.section-btn button:focus span {
-  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
-}
-
-.csstransforms3d .section-btn a span::before,
-.csstransforms3d .section-btn button span::before {
-  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
-}
-
-/* ==========================================================================
    Cards and Content Areas
    ========================================================================== */
 .about-content,
@@ -258,46 +238,6 @@
 }
 
 /* ==========================================================================
-   Footer
-   ========================================================================== */
-footer {
-  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%) !important;
-}
-
-.social-icon li a {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-.social-icon li a:hover {
-  background: var(--white) !important;
-  color: var(--gradient-blue) !important;
-  transform: translateY(-3px) scale(1.1) !important;
-}
-
-/* ==========================================================================
-   Text Colors
-   ========================================================================== */
-/* Keep HOME and FOOTER text white */
-#home h1, #home h2, #home p,
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p {
-  color: var(--white) !important;
-}
-
-/* Other sections use dark text */
-#about h1, #about h2, #about h3, #about h4, #about h5, #about h6,
-#team h1, #team h2, #team h3, #team h4, #team h5, #team h6,
-#soft-skills h1, #soft-skills h2, #soft-skills h3, #soft-skills h4, #soft-skills h5, #soft-skills h6,
-#experience h1, #experience h2, #experience h3, #experience h4, #experience h5, #experience h6,
-#contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6, #partners h1, #partners h2, #partners h3, #partners h4, #partners h5, #partners h6{
-  color: var(--text-dark) !important;
-}
-
-#about p, #team p, #soft-skills p, #experience p, #contact p, .text-light {
-  color: var(--text-light) !important;
-}
-
-/* ==========================================================================
    Links and Interactive Text
    ========================================================================== */
 a {
@@ -378,10 +318,3 @@ a:hover, a:focus {
   border-radius: 15px 15px 0 0;
 }
 
-/* Remove the gradient line from contact-info boxes */
-/* .contact-info::before - REMOVED */
-
-/* Ensure positioning context */
-.about-content {
-  position: relative;
-}

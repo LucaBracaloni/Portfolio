@@ -3,171 +3,10 @@
    Modern, interactive contact section with cards and animations
    ========================================================================== */
 
-/* Contact Cards Layout - Enhanced */
-.contact-cards-row {
-  margin-top: 50px;
-  margin-bottom: 60px;
-}
-
-.contact-card {
-  background: var(--white);
-  border-radius: 25px;
-  padding: 40px 30px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  height: 240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  box-shadow: 0 12px 35px rgba(26, 75, 110, 0.08);
-  border: 1px solid rgba(77, 196, 125, 0.1);
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gradient-green) 0%, var(--gradient-blue) 100%);
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
-  border-radius: 25px 25px 0 0;
-}
-
-.contact-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(26, 75, 110, 0.18);
-  border-color: rgba(77, 196, 125, 0.4);
-}
-
-.contact-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* Contact Icons - Enhanced with better stretch effect */
-.contact-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, rgba(77, 196, 125, 0.1) 0%, rgba(26, 75, 110, 0.1) 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.contact-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--gradient-green) 0%, var(--gradient-blue) 100%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: -1;
-}
-
-.contact-icon i {
-  font-size: 36px;
-  color: var(--gradient-blue);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  z-index: 3;
-}
-
-.contact-card:hover .contact-icon {
-  transform: scale(1.15) rotate(5deg);
-  box-shadow: 0 15px 30px rgba(26, 75, 110, 0.25);
-}
-
-.contact-card:hover .contact-icon::before {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-.contact-card:hover .contact-icon i {
-  color: var(--white);
-  transform: scale(1.1) rotate(-5deg);
-}
-
-/* Contact Card Text */
-.contact-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 10px;
-  transition: all 0.3s ease;
-}
-
-.contact-card p {
-  font-size: 14px;
-  color: var(--text-light);
-  margin: 0;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-.contact-card:hover h3 {
-  color: var(--gradient-blue);
-}
-
-.contact-card:hover p {
-  color: var(--text-dark);
-}
-
-/* Contact Card Links */
-.contact-card p a {
-  color: var(--text-light);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.contact-card:hover p a {
-  color: var(--gradient-blue);
-  font-weight: 600;
-}
-
-/* Hover Effect Background - Enhanced Shimmer */
-.contact-hover-effect {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(77, 196, 125, 0.1), 
-    rgba(255, 255, 255, 0.3),
-    rgba(26, 75, 110, 0.1), 
-    transparent
-  );
-  transition: left 0.8s ease;
-  z-index: 1;
-  border-radius: 25px;
-}
-
-.contact-card:hover .contact-hover-effect {
-  left: 100%;
-}
-
 .contact-cta {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 5vh;
   width: 100%;
 }
 
@@ -309,42 +148,7 @@
   animation: buttonPulse 1.5s infinite;
 }
 
-/* Responsive Design */
-@media (max-width: 991px) {
-  .contact-cards-row {
-    margin-top: 40px;
-  }
-  
-  .contact-card {
-    height: 220px;
-    padding: 35px 25px;
-    border-radius: 20px;
-  }
-  
-  .contact-icon {
-    width: 75px;
-    height: 75px;
-    margin-bottom: 18px;
-  }
-  
-  .contact-icon i {
-    font-size: 34px;
-  }
-  
-  .contact-card h3 {
-    font-size: 18px;
-  }
-  
-  .contact-card p {
-    font-size: 13px;
-  }
-}
-
 @media (max-width: 767px) {
-  .contact-card {
-    height: 200px;
-    padding: 30px 20px;
-  }
   
   .contact-cta h3 {
     font-size: 24px;
@@ -371,29 +175,6 @@
 }
 
 @media (max-width: 480px) {
-  .contact-card {
-    height: 180px;
-    padding: 25px 15px;
-    border-radius: 18px;
-  }
-  
-  .contact-icon {
-    width: 65px;
-    height: 65px;
-  }
-  
-  .contact-icon i {
-    font-size: 30px;
-  }
-  
-  .contact-card h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .contact-card p {
-    font-size: 12px;
-  }
   
   .contact-cta h3 {
     font-size: 20px;
@@ -423,14 +204,6 @@
   }
 }
 
-.contact-cards-row .contact-card {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.contact-cards-row .contact-card:nth-child(1) { animation-delay: 0.1s; }
-.contact-cards-row .contact-card:nth-child(2) { animation-delay: 0.2s; }
-.contact-cards-row .contact-card:nth-child(3) { animation-delay: 0.3s; }
-.contact-cards-row .contact-card:nth-child(4) { animation-delay: 0.4s; }
 
 /* Pulse animation for primary CTA button */
 @keyframes pulse {

@@ -1,0 +1,112 @@
+/* Bootstrap 5 Custom Styles - Compatibilità con il design esistente */
+
+/* Navbar Bootstrap 5 - adattamento stili custom */
+.custom-navbar.fixed-top {
+  background-color: var(--navbar-bg, #4dc47d);
+  padding: 10px 0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  top: 0 !important;
+  margin: 0 !important;
+}
+
+.custom-navbar .navbar-brand {
+  color: white;
+  font-weight: normal;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover,
+.custom-navbar .navbar-brand:focus {
+  color: white;
+}
+
+/* Nav links Bootstrap 5 */
+.custom-navbar .nav-link {
+  font-size: 14px;
+  font-weight: normal;
+  color: white !important;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 0.4rem 1rem !important;
+  margin: 0;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  color: var(--contrast-color, #ffd700) !important;
+}
+
+/* Effetto underline sui link */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  width: 80%;
+}
+
+/* Navbar toggler Bootstrap 5 */
+.custom-navbar .navbar-toggler {
+  border: none;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Navbar collapse effect */
+@media(min-width: 992px) {
+  .custom-navbar.fixed-top {
+    background: transparent;
+    padding: 5px 0;
+  }
+  
+  .custom-navbar.top-nav-collapse {
+    padding: 8px 0;
+  }
+  
+  .custom-navbar .navbar-nav {
+    align-items: center;
+  }
+}
+
+/* Mobile navbar styles */
+@media (max-width: 991px) {
+  .custom-navbar.fixed-top {
+    padding: 8px 0;
+  }
+  
+  .custom-navbar .navbar-collapse {
+    padding: 0.5rem 1rem;
+    border-radius: 0 0 10px 10px;
+    margin-top: 5px;
+  }
+  
+  .custom-navbar .nav-link {
+    padding: 0.6rem 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .custom-navbar .nav-item:last-child .nav-link {
+    border-bottom: none;
+  }
+}
